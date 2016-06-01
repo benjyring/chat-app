@@ -1,6 +1,4 @@
-# chat-app
-Learn Socket.io
-=====
+#Learn Socket.io by building a chat-app
 
 ###Two goals:
 
