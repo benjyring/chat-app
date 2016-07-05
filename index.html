@@ -1,18 +1,58 @@
 <!doctype html>
 <html>
   <head>
-    <title>Socket.IO chat</title>
+    <title>Jyring Chat</title>
+    <!-- <link href="css/styles.css" rel="stylesheet"> -->
     <style>
-      * { margin: 0; padding: 0; box-sizing: border-box; }
-      body { font: 13px Helvetica, Arial; }
-      form { background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; }
-      form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
-      form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
-      #messages { list-style-type: none; margin: 0; padding: 0; }
-      #messages li { padding: 5px 10px; }
-      #messages li:nth-child(odd) { background: #eee; }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: black;
+        color: white;
+        font: 13px Helvetica, Arial;
+      }
+      form {
+        bottom: 0;
+        margin: 0 5%;
+        position: fixed;
+        width: 90%;
+      }
+      form input {
+        background-color: black;
+        border: 0;
+        border-top: 2px solid rgb(255, 224, 0);
+        color: white;
+        font-size: 20px;
+        padding: 0.8em 1.5em;
+        width: 100%;
+      }
+      form button {
+        background: rgb(255, 224, 0);
+        border: none;
+        float: right;
+        padding: .75em 1.5em;
+      }
+      #messages {
+        list-style-type: none;
+        margin: 0 7%;
+        padding: 0;
+        width: 86%;
+      }
+      #messages li {
+        color: #ce9172;
+        padding: 5px 10px;
+      }
+      #messages li:nth-child(odd) {
+        background: #252525;
+        color: #ffe000;
+        text-align: right;
+      }
     </style>
   </head>
+
   <body>
     <ul id="messages"></ul>
     <form action="">
