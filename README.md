@@ -1,6 +1,15 @@
-#Learn Socket.io by building a chat-app
+#Chat-app
 
-###Two goals:
+###Goals:
 
-1. To learn how to work with Socket.io to create apps
-2. To create a chat application with a dark interface, that suits my office needs
+1. Get familiar with Socket.io
+2. Create a couple of UIs
+3. Make a Facebook login that works with...
+4. On-server usernames/passwords
+5. Create user preferences that are saved
+  * Interfaces
+  * Color Schemes
+  * HTML Support
+6. Make notifications
+7. GIFY Support
+8. GIF Friday
