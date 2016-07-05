@@ -13,3 +13,4 @@
 6. Make notifications
 7. GIFY Support
 8. GIF Friday
+9. Spell Check
