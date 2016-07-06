@@ -9,8 +9,11 @@
         margin: 0;
         padding: 0;
       }
+      *:focus {
+          outline: none;
+      }
       body {
-        background-color: black;
+        background-color: rgb(25, 25, 25);
         color: white;
         font: 13px Helvetica, Arial;
       }
@@ -21,7 +24,7 @@
         width: 90%;
       }
       form input {
-        background-color: black;
+        background-color: rgb(25, 25, 25);
         border: 0;
         border-top: 2px solid rgb(255, 224, 0);
         color: white;
@@ -32,21 +35,27 @@
       form button {
         background: rgb(255, 224, 0);
         border: none;
-        float: right;
+        right: 0;
         padding: .75em 1.5em;
+        position: absolute;
       }
       #messages {
+        bottom: 0;
         list-style-type: none;
-        margin: 0 7%;
+        margin: 0 7% 15vh;
+        height: 85vh;
         padding: 0;
+        position: absolute;
+        overflow: auto;
         width: 86%;
+        word-wrap: break-word;
       }
       #messages li {
         color: #ce9172;
         padding: 5px 10px;
       }
       #messages li:nth-child(odd) {
-        background: #252525;
+        background: black;
         color: #ffe000;
         text-align: right;
       }
@@ -69,6 +78,7 @@
       });
       socket.on('chat message', function(msg){
         $('#messages').append($('<li>').text(msg));
+        $('#messages').scrollTop($('#messages').prop('scrollHeight'));
       });
     </script>
   </body>
