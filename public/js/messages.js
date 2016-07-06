@@ -13,10 +13,12 @@ socket.on('chat message', function(msg){
 
 hamburger.click(function(){
   $(this).toggleClass('open');
+  $('ul#messages').css('opacity','50%')
 });
 
 $(document).click(function(e) {
   if( e.target.id != 'hamburger') {
     hamburger.removeClass('open')
+    $('ul#messages').css('opacity','100%')
   }
 });
