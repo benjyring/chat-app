@@ -2,84 +2,31 @@
 <html>
   <head>
     <title>Jyring Chat</title>
-    <!-- <link href="css/styles.css" rel="stylesheet"> -->
-    <style>
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-      *:focus {
-          outline: none;
-      }
-      body {
-        background-color: rgb(25, 25, 25);
-        color: white;
-        font: 13px Helvetica, Arial;
-      }
-      form {
-        bottom: 0;
-        margin: 0 5%;
-        position: fixed;
-        width: 90%;
-      }
-      form input {
-        background-color: rgb(25, 25, 25);
-        border: 0;
-        border-top: 2px solid rgb(255, 224, 0);
-        color: white;
-        font-size: 20px;
-        padding: 0.8em 1.5em;
-        width: 100%;
-      }
-      form button {
-        background: rgb(255, 224, 0);
-        border: none;
-        right: 0;
-        padding: .75em 1.5em;
-        position: absolute;
-      }
-      #messages {
-        bottom: 0;
-        list-style-type: none;
-        margin: 0 7% 15vh;
-        height: 85vh;
-        padding: 0;
-        position: absolute;
-        overflow: auto;
-        width: 86%;
-        word-wrap: break-word;
-      }
-      #messages li {
-        color: #ce9172;
-        padding: 5px 10px;
-      }
-      #messages li:nth-child(odd) {
-        background: black;
-        color: #ffe000;
-        text-align: right;
-      }
-    </style>
+    <link href="css/styles.css" rel="stylesheet">
   </head>
 
   <body>
+<!--NAVIGATION-->
+    <a id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
+    <nav>
+      <ul>
+        <li>Dark Theme</li>
+        <li>Light Theme</li>
+        <li>Custom CSS [coming soon]</li>
+      </ul>
+    </nav>
+<!--MAIN BODY-->
     <ul id="messages"></ul>
     <form action="">
       <input id="m" autocomplete="off" /><button>Send</button>
     </form>
+<!--SCRIPTS-->
     <script src="/socket.io/socket.io.js"></script>
     <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
-    <script>
-      var socket = io();
-      $('form').submit(function(){
-        socket.emit('chat message', $('#m').val());
-        $('#m').val('');
-        return false;
-      });
-      socket.on('chat message', function(msg){
-        $('#messages').append($('<li>').text(msg));
-        $('#messages').scrollTop($('#messages').prop('scrollHeight'));
-      });
-    </script>
+    <script src="js/messages.js"></script>
   </body>
 </html>
