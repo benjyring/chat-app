@@ -3,6 +3,7 @@
         box-sizing: border-box;
         margin: 0;
         padding: 0;
+        transition: background 1s, background-color 1s, border .7s;
       }
       *:focus {
           outline: none;
@@ -16,7 +17,7 @@
       a#hamburger {
         position: absolute;
         top: 20px;
-        left: 20px;
+        left: calc(5% - 18px);
         z-index: 1;
         width: 36px;
         height: 36px;
@@ -125,3 +126,34 @@
         color: #ffe000;
         text-align: right;
       }
+
+
+
+
+
+/*LIGHT THEME*/
+.light a#hamburger {
+  border: 1px solid rgba(34, 143, 255, 0.5);
+}
+.light #hamburger span,
+.light form button {
+  background: rgb(34, 143, 255);
+}
+.light body {
+  background-color: rgb(245,245,245);
+}
+.light form input {
+  background-color: rgb(245,245,245);
+  border-top: 2px solid rgb(34, 143, 255);
+  color: rgb(25, 25, 25);
+}
+.light #messages li {
+  color: rgb(34, 143, 255);
+}
+.light #messages li:nth-child(odd) {
+    background: rgb(225, 225, 225);
+    color: rgb(25, 25, 25);
+}
+.light nav {
+  background: rgba(34, 143, 255, 0.75);
+}
