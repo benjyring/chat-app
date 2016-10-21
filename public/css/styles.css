@@ -16,6 +16,8 @@
         color: white;
         font: 13px Helvetica, Arial;
       }
+
+
 /*NAVIGATION STYLES*/
       a#hamburger {
         position: absolute;
@@ -82,6 +84,8 @@
       .open + nav {
         transform: none;
       }
+
+
 /*INPUT STYLES*/
       form {
         bottom: 0;
@@ -98,7 +102,7 @@
         padding: 0.8em 1.5em;
         width: 100%;
       }
-      form:focus {
+      form *:focus {
         box-shadow: 0px 0px 5px 1px rgba(255, 224, 0, 0.5) inset;
       }
       form button {
@@ -108,6 +112,8 @@
         padding: .75em 1.5em;
         position: absolute;
       }
+
+
 /*MESSAGE STYLES*/
       #messages {
         bottom: 0;
@@ -149,6 +155,9 @@
   background-color: rgb(245,245,245);
   border-top: 2px solid rgb(34, 143, 255);
   color: rgb(25, 25, 25);
+}
+.light form *:focus {
+  box-shadow: 0px 0px 5px 1px rgba(34, 143, 255, 0.5) inset;
 }
 .light #messages li {
   color: rgb(34, 143, 255);
